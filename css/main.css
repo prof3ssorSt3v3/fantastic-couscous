@@ -1,3 +1,98 @@
+:root {
+  --primary: hsl(180 50% 80% / 1);
+  --onPrimary: hsl(180 50% 30% / 1);
+
+  --ff-base: sans-serif;
+}
 * {
   box-sizing: border-box;
+}
+html {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+header {
+  padding: 1rem 2rem;
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+form {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.formbox {
+  /* mobile first styling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 32px; /* force the label, select, and button to be 32px high */
+  gap: 0.5rem; /* between input and label */
+  margin-block: 1rem; /* double the gap */
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2; /* same as select and button */
+  padding-block: calc(0.25rem + 1px); /* on each side */
+}
+input[type='checkbox'] {
+  scale: 2;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea,
+select,
+button {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 0.25rem 1rem;
+  font-family: var(--ff-base);
+}
+option {
+  padding-block: 0;
+  margin-block: 0;
+  font-weight: 300;
+}
+textarea {
+  min-height: 4lh;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+button {
+  background-color: var(--onPrimary);
+  color: var(--primary);
+  border: none;
+  font-weight: 300;
+  padding-block: calc(1px + 0.25rem); /* on each side */
+}
+.input--xs {
+  width: auto;
+}
+.input--sm {
+  width: 8ch;
+}
+.input--md {
+  width: 16ch;
+}
+.input--lg {
+  width: 100%;
+}
+
+@media screen and (width > 700px) {
+  .formbox {
+    flex-direction: row;
+  }
+  .formbox:has([type='checkbox']) {
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
