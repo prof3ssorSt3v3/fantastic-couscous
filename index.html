@@ -3,24 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms</title>
+    <title>Forms and Promises</title>
     <link rel="stylesheet" href="css/main.css" />
     <script type="module" src="js/main.js"></script>
   </head>
   <body>
     <header>
-      <h1>Form Scripts</h1>
+      <h1>Form Scripts &amp; Promises</h1>
     </header>
     <main>
-      <form action="#" id="formPlace">
+      <form action="#" id="formPlace" method="get">
         <div class="formbox">
-          <label for="places">Places</label>
-          <select id="places" name="places">
+          <label for="selectPlaces">Places</label>
+          <select id="selectPlaces" name="places">
             <option value="">Please pick a location</option>
           </select>
+          <input list="provinceData" id="provinceList" name="provinceList" />
           <button id="btnPick">Save Place</button>
         </div>
       </form>
+
+      <video>
+        <source src="" type="video/mp4" />
+        <source src="" type="video/ogv" />
+        <source src="" type="video/mpeg" />
+        <source src="" type="video/avi" />
+      </video>
+
+      <datalist id="provinceData"></datalist>
+
       <h3 id="title">Sample Title</h3>
       <section id="data"></section>
     </main>

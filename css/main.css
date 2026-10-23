@@ -47,6 +47,7 @@ input[type='checkbox'] {
 input[type='text'],
 input[type='email'],
 input[type='password'],
+input:not([type]),
 textarea,
 select,
 button {
@@ -87,7 +88,7 @@ button {
   width: 100%;
 }
 
-@media screen and (width > 700px) {
+@media screen and (width > 640px) {
   .formbox {
     flex-direction: row;
   }
