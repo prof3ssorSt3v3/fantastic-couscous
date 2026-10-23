@@ -84,5 +84,28 @@ const myPromise = new Promise((ftw, wtf)=>{
     }).catch((err)=>{
       //this function is placed on the microtask queue along with some data
       //IF the promise function called reject()
+    });
+
+
+  //Promise example for loading an image
+  function loadImage(url) {
+    return new Promise((resolve, reject) => {
+      const img = document.createElement('img');
+      img.src = url;
+
+      img.onload = () => resolve(img);
+      img.onerror = (err) => reject(new Error(`Failed to load image at: ${url}`));
+    });
+  }
+
+  // Usage:
+  loadImage('https://picsum.photos/300/300')
+    .then((img) => {
+      //resolve was called
+      document.body.appendChild(img);
     })
+    .catch((error) => {
+      //reject was called
+      console.error(error);
+    });
 */
