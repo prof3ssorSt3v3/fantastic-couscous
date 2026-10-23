@@ -98,13 +98,13 @@ function populateDropDown() {
   select.append(df); //do the append to the page AFTER the loop
 }
 
-function handleFormSubmit(cheese) {
+function handleFormSubmit(ev) {
   //get the currently selected item and add it to #data
-  console.log(cheese.type);
+  console.log(ev.type);
   //http://127.0.0.1:9014/index.html?places=AB - querystring added
   ev.preventDefault(); //stop the page from reloading...
   //need to get the select
-  const select = cheese.target.querySelector('#selectPlaces');
+  const select = ev.target.querySelector('#selectPlaces');
   addItemToSection(select.value, select.selectedOptions[0].text);
 }
 
