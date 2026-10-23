@@ -60,3 +60,29 @@ function waitThen(func, delay = 1000) {
     }, delay);
   });
 }
+
+/* Promise Syntax Review
+const myPromise = new Promise((ftw, wtf)=>{
+    //run a function that can take any amount of time
+    // this first function starts on the main stack
+    // when successfully completed call the resolve function.
+    // send back any data you want
+    const data = {id:123};
+    ftw(data);
+    //if your function fails then call the reject function
+    // it can also send back anything you want.
+    const err = new Error('Forgot my lunch');
+    wtf(err);
+
+    //The Promise object will hold the results of the resolve or reject 
+    //so they can be placed on the microtask queue
+  })
+
+  myPromise.then((data)=>{
+      //this function is placed on the microtask queue along with the data
+      //IF the promise function called resolve()
+    }).catch((err)=>{
+      //this function is placed on the microtask queue along with some data
+      //IF the promise function called reject()
+    })
+*/
