@@ -47,7 +47,7 @@ input[type='checkbox'] {
 input[type='text'],
 input[type='email'],
 input[type='password'],
-input:not([type]),
+input[list],
 textarea,
 select,
 button {
