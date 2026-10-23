@@ -108,4 +108,7 @@ const myPromise = new Promise((ftw, wtf)=>{
       //reject was called
       console.error(error);
     });
+
+  //Article / Tutorial on how to use Promises with Event Listeners
+  https://dev.to/prof3ssorst3v3/you-can-convert-your-callbacks-to-promises-141n
 */
